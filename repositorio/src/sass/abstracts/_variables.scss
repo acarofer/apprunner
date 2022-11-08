@@ -1,0 +1,95 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+$margin: 1rem;
+
+
+/// Copy text color
+/// @type Color
+$text-color: #333333;
+
+/// Main brand color
+$brand-color-1: #f1f1f1;
+$brand-color-2: #fff;
+
+$hop-house-color: "transparent";
+$hop-house-text-color: #000;
+
+$heineken-color: #005c1f;
+$heineken-text-color: #000;
+
+$el-aguila-color: #315470;
+$el-aguila-text-color: #000;
+
+$desperados-color: #fbd100;
+$desperados-text-color: #000;
+
+$amstel-color: #FF2B00;
+$amstel-text-color: #000;
+
+$la-18-70-color: #424949;
+$la-18-70-text-color: #fff;
+
+$guinness-color: #F1C761;
+$guinness-text-color: #000;
+
+$cruzcampo-color: #AD1E1C;
+$cruzcampo-text-color: #FFFFFF;
+
+$ladron-de-manzanas-color: #F2F2D5;
+$ladron-de-manzanas-text-color: #1A171B;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

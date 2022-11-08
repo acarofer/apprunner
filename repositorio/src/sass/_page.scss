@@ -1,0 +1,141 @@
+::placeholder {
+  font-size: 14px;
+  color: $mid-grey;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.grid-container {
+  height: 100vh;
+  width: 100vw !important;
+  color: $text-color;
+
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "hk-body hk-map-container"
+    "hk-footer hk-footer";
+  }
+
+  @media (min-width: 1024px) and (max-width: 1365px) {
+    grid-template-columns: 0.33fr 0.67fr;
+  }
+
+  @media (min-width: 1366px) {
+    grid-template-columns: 0.28fr 0.72fr;
+  }
+
+  .hk-body {
+    @media (min-width: 1024px) {
+      grid-area: hk-body;
+    }
+
+    div.hk-search-container {
+      background-color: $brand-color-1;
+      padding: 1rem 1rem 0.7rem;
+      @media (max-width: 1023px) {
+        max-height: 240px;
+      }
+      @media (min-width: 1024px) {
+        min-height: 270px;
+      }
+
+      div.hk-main-text-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        img.hk-main-img {
+          margin-right: 0.5rem;
+        }
+
+        p.hk-main-text {
+          font-size: 14px;
+          text-align: left;
+          font-weight: bold;
+        }
+      }
+
+      div.hk-search-input-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+        input.hk-search-input {
+          width: 100%;
+          display: block;
+          padding: 10px;
+          font-size: 16px;
+          border-width: 1px;
+          border-color: $text-color;
+          color: $text-color;
+          border-style: solid;
+          border-radius: 5px;
+          background-image: url("../images/search.svg");
+          background-repeat: no-repeat;
+          background-position: 98% 50%;
+          background-color: $brand-color-1;
+          @media (min-width: 1024px) {
+            grid-area: hk-search;
+          }
+        }
+      }
+
+      div.hk-location-container {
+        margin-top: 1rem;
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        button.hk-btn-location {
+          background-color: transparent;
+          border: none;
+          color: $heineken-color;
+          font-weight: bold;
+          font-size: 14px;
+          padding-left: 0;
+          text-transform: uppercase;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+        img.hk-main-img {
+          margin-right: 0.5rem;
+        }
+      }
+      span.hk-info-no-location {
+        font-size: 10px;
+        margin-top: 1rem;
+        display: block;
+        font-weight: 600;
+        @media (min-width: 500px) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .hk-map-container {
+    @media (min-width: 1024px) {
+      grid-area: hk-map-container;
+    }
+  }
+
+  .hk-footer {
+    @media (min-width: 1024px) {
+      grid-area: hk-footer;
+    }
+  }
+}
+
+
+#map {
+  height: 50%;
+
+  @media (min-width: 1024px) {
+    height: 100vh;
+  }
+}

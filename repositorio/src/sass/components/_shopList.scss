@@ -1,0 +1,146 @@
+.hk-shop-list-container {
+  background-color: $brand-color-2;
+  color: $text-color;
+
+  @media (min-width: 1024px) {
+    grid-area: hk-shop-list-container;
+    overflow: scroll;
+  }
+
+  div.hk-shop-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    div.hk-shop-info {
+      margin-top: 24px;
+      max-height: 270px;
+      width: 100%;
+      border-bottom: 1px solid $brand-color-1;
+      transition: all 500s ease;
+      opacity: 0;
+      display: none;
+      cursor: pointer;
+
+      .hk-shop-info-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 110px;
+        .hk-shop-info-brand {
+          font-size: 13px;
+          list-style-type: none;
+          font-weight: bold;
+          border: none;
+          padding: 5px 8px;
+          border-radius: 12px;
+          display: inline-block;
+          margin: 0 4px 6px 0;
+
+          &-heineken {
+            background-color: $heineken-color;
+            color: #fff;
+          }
+          &-amstel {
+            background-color: $amstel-color;
+            color: #fff;
+          }
+          &-el-aguila {
+            background-color: $el-aguila-color;
+            color: #fff;
+          }
+          &-desperados {
+            background-color: $desperados-color;
+            color: $text-color;
+          }
+          &-hop-house {
+            background-color: transparent;
+            color: $text-color;
+            border: 1px solid $text-color;
+          }
+          &-cruzcampo {
+            background-color: $cruzcampo-color;
+            color: $cruzcampo-text-color;
+          }
+          &-ladron-de-manzanas {
+            background-color: $ladron-de-manzanas-color;
+            color: $ladron-de-manzanas-text-color;
+          }
+        }
+        .hk-shop-info-shop-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .hk-shop-info-shopname {
+            font-weight: bold;
+            font-size: 14px;
+            margin: 0;
+            @media (min-width: 1024px) {
+              font-size: 16px;
+            }
+          }
+          .hk-shop-info-distance {
+            font-size: 14px;
+            @media (min-width: 1024px) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      .hk-shop-info-address {
+        font-size: 16px;
+        min-height: 18px;
+      }
+      .hk-shop-info-complete-address {
+        font-size: 14px;
+        opacity: 0.7;
+        margin-top: 5px;
+      }
+      .hk-shop-info-getdirections {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        color: $heineken-color;
+        margin: 1rem 0;
+      }
+      .hk-shop-info-promo {
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        padding-left: 0;
+
+        li {
+          padding: 5px 0;
+        }
+
+        span {
+          font-weight: normal;
+        }
+        span.hk-shop-promo {
+          &-heineken {
+            color: $heineken-color;
+            font-weight: bold;
+          }
+          &-amstel {
+            color: $amstel-color;
+            font-weight: bold;
+          }
+          &-el-aguila {
+            color: $el-aguila-color;
+            font-weight: bold;
+          }
+          &-desperados {
+            color: $desperados-color;
+            font-weight: bold;
+          }
+          &-hop-house {
+            color: $text-color;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

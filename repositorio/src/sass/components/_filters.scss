@@ -1,0 +1,155 @@
+/*
+Css for the filters
+ */
+
+.view {
+  display: block !important;
+  opacity: 1 !important;
+  transform: scale(1) rotate(0deg);
+  border-radius:4px;
+  //animation: selected 300ms 1 ease-in-out;
+}
+
+@keyframes selected {
+  0% {
+    border-radius:100%;
+    transform: scale(0.7) ;
+  }
+}
+
+.hk-filter-container {
+  margin-top: 0.7rem;
+  @media (min-width: 1024px) {
+    margin-top: 1.1rem;
+  }
+
+  .hk-panel {
+    .hk-heading {
+      font-size: 16px;
+      font-weight: bold;
+      color: $text-color;
+      text-transform: uppercase;
+    }
+    ul.hk-brand-list {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 5px 0 0;
+
+      @media (min-width: 1024px) {
+        margin-top: 1.1rem;
+      }
+
+      > li {
+        margin: 4px;
+        font-size: 13px;
+        border-radius: 10px;
+        list-style-type: none;
+        text-align: center;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:hover {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+        }
+
+        .hk-brand-filter-button {
+          font-size: 13px;
+          font-weight: bold;
+          border: none;
+          padding: 3px 7px;
+          border-radius: 12px;
+          box-shadow: none;
+          cursor: pointer;
+          outline: none;
+
+          &.active-show {
+            background-color: #666;
+            color: white;
+          }
+        }
+      }
+      .hk-brand-filter-button-all-container {
+        flex-basis: 100%;
+        text-align: right;
+        padding-top: 0.4rem;
+
+        &:hover {
+          -webkit-transform: none;
+          -ms-transform: none;
+          transform: none;
+        }
+
+        @media (min-width: 1024px) and (max-width: 1365px) {
+          margin-top: 1rem;
+        }
+
+        @media (min-width: 1366px) {
+          margin-top: 1.8rem;
+        }
+
+        a.hk-brand-filter-button-all {
+          font-size: 14px;
+          font-weight: bold;
+          color: $heineken-color;
+          text-decoration: underline;
+          text-transform: uppercase;
+          padding: 5px 0 0;
+          cursor: pointer;
+
+          &:hover {
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hk-brand-filter-button-all {
+  display: block;
+}
+
+/*
+Css for the accordion
+ */
+@media (max-width: 1023px) {
+  .accordion-container {
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+
+    .panel {
+      transition: 0.4s;
+
+      .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+
+      .heading {
+        text-align: left;
+        width: 100%;
+        padding: 10px 0;
+        background: url("../images/keyboard_arrow_down.svg") no-repeat right;
+        background-position: 70px 6px !important;
+        background-size: 28px !important;
+        cursor: pointer;
+
+        &.active {
+          background: url("../images/keyboard_arrow_up.svg") no-repeat right;
+        }
+      }
+    }
+  }
+  .accordion-container .panel p:last-child {
+    //padding-bottom: 20px;
+  }
+}

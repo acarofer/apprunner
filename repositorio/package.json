@@ -1,0 +1,41 @@
+{
+  "name": "encuentra_tu_tienda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "deploy": "NODE_ENV=production webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/flat101team/heineken_api.git"
+  },
+  "author": "Josandreu",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/flat101team/heineken_api#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "autoprefixer": "^10.2.5",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.2.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.4.0",
+    "postcss-loader": "^5.2.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@googlemaps/markerclustererplus": "^1.2.0",
+    "buffer": "^6.0.3",
+    "nodejs-base64-converter": "^1.0.5"
+  }
+}
